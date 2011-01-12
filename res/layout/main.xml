@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/mainview"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="560px">
+	
+	<LinearLayout android:id="@+id/topview"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="144px">
+
+		<shao.robopack.FilteredView android:id="@+id/finalview"
+			android:layout_width="144px" android:layout_height="144px"
+			android:layout_centerHorizontal="true" />
+			
+			<LinearLayout android:id="@+id/toprightview"
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" android:layout_width="fill_parent"
+				android:layout_height="144px">
+
+				<shao.robopack.CamView android:id="@+id/camview"
+						android:layout_width="72px" android:layout_height="96px" />
+						
+				<TextView android:id="@+id/statsView"
+						android:textSize="6pt" android:layout_width="fill_parent"
+						android:layout_height="40px" android:text="statsView"/>
+			</LinearLayout>					
+	</LinearLayout>
+		
+	<shao.robopack.FilterConfigView
+		        android:id="@+id/filterconfigview"
+                android:layout_width="240px"
+                android:layout_height="180px"
+                android:orientation="vertical">
+		
+		<shao.robopack.HorizontalSlider android:id="@+id/MinR" android:tag="MinRed" android:layout_width="220px" android:layout_height="28px" android:max="262143" />
+		<shao.robopack.HorizontalSlider android:id="@+id/MaxR" android:tag="MaxRed" android:layout_width="220px" android:layout_height="28px" android:max="262143" />
+		<shao.robopack.HorizontalSlider android:id="@+id/MinG" android:tag="MinGreen" android:layout_width="220px" android:layout_height="28px" android:max="262143" />
+		<shao.robopack.HorizontalSlider android:id="@+id/MaxG" android:tag="MaxGreen" android:layout_width="220px" android:layout_height="28px" android:max="262143" />
+		<shao.robopack.HorizontalSlider android:id="@+id/MinB" android:tag="MinBlue" android:layout_width="220px" android:layout_height="28px" android:max="262143" />
+		<shao.robopack.HorizontalSlider android:id="@+id/MaxB" android:tag="MaxBlue" android:layout_width="220px" android:layout_height="28px" android:max="262143" />
+		<!-- 
+		<shao.robopack.HorizontalSlider android:id="@+id/MinI" android:tag="MinIntensity" android:layout_width="240px" android:layout_height="20px" android:max="256" />
+		<shao.robopack.HorizontalSlider android:id="@+id/MaxI" android:tag="MaxIntensity" android:layout_width="240px" android:layout_height="20px" android:max="512" />
+		<shao.robopack.HorizontalSlider android:id="@+id/Threshold" android:tag="Threshold" android:layout_width="200px" android:layout_height="20px" android:max="256" />
+		-->
+
+	</shao.robopack.FilterConfigView>	
+		
+	<shao.robopack.CommsView android:id="@+id/commsview"
+		android:textSize="8pt" android:layout_width="fill_parent"
+		android:layout_height="78px" />
+		
+
+		
+	<TextView android:id="@+id/dataview"
+		android:textSize="8pt" android:layout_width="fill_parent"
+		android:layout_height="78px" />
+
+
+</LinearLayout>
